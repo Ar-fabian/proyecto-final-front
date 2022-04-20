@@ -1,0 +1,26 @@
+<p>form works!</p>
+<form (ngSubmit)="edit ? updateProduct() : createProduct()" >
+    <input 
+        type="text" 
+        placeholder="Nombre del producto"
+        name="nombre"
+        [(ngModel)]="product.productName"
+        >
+    <br>
+    <input 
+        type="text" 
+        placeholder="Cantidad"
+        name="cantidad"
+        [(ngModel)]="product.stock"
+        >
+    <br>
+    <input 
+        type="text" 
+        placeholder="Punto de venta"
+        name="Punto de venta"
+        [(ngModel)]="product.store"
+        >
+        <button type="submit">
+            Guardar
+        </button>
+</form>

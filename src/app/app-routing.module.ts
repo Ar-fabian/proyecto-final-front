@@ -1,7 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidateTokenGuard } from './guards/validate-token.guard';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'auth',
+    loadChildren: ()=> import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path: 'protected',
+    loadChildren: ()=> import('./protected/protected.module').then(m => m.ProtectedModule),
+    canActivate:[ValidateTokenGuard],
+    canLoad:[ ValidateTokenGuard]
+  },
+  {
+    path:'map',
+    loadChildren:()=> import('./maps/maps.module').then( m => m.MapsModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'auth'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

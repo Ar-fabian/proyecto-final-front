@@ -1,0 +1,22 @@
+<h1>Puntos de venta</h1>
+<mat-divider></mat-divider>
+
+<div class="container">
+
+  <mat-card class="card" *ngFor="let store of stores">
+    <mat-card-header class="card__header">
+      <mat-card-title >
+        <h2 class="card__title">{{store.nameStore}}</h2>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-actions class="card__actions">
+      <button mat-button
+                (click)="openMap( store.nameStore )"> <span class="card__txt">Ruta</span> </button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+
+

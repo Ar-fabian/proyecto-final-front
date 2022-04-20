@@ -1,0 +1,42 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode="over">
+        <mat-toolbar>
+            <button mat-icon-button
+                    (click)="sidenav.toggle()">
+                <span>Menu</span>
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar>
+        <mat-nav-list>
+            <a routerLink="./main"
+            mat-list-item
+            (click)="sidenav.toggle()">
+            <mat-icon mat-list-icon>label</mat-icon>
+            <span>main</span>
+            </a>
+            <a routerLink="./stock"
+            mat-list-item
+            (click)="sidenav.toggle()">
+            <mat-icon mat-list-icon>label</mat-icon>
+            <span>Stock</span>
+            </a>
+            <a routerLink="./products"
+            mat-list-item
+            (click)="sidenav.toggle()">
+            <mat-icon mat-list-icon>label</mat-icon>
+            <span>Productos</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button
+                (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-button>
+            logout
+        </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>

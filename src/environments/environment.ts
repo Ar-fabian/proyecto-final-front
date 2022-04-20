@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://api-rest-bit.herokuapp.com/api',
+  localbaseUrl: 'http://localhost:8083/api',
+  apiKey: 'pk.eyJ1IjoiYXItZmFiaWFuIiwiYSI6ImNsMGE2MzNmaTA5cHIzY3J0aTZ5eWVjYmcifQ.jnbbz0qBQQLEN6qGNVW15Q'
 };
 
 /*
