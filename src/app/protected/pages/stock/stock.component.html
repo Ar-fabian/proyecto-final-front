@@ -1,2 +1,7 @@
-<app-search></app-search>
-<app-product-list></app-product-list>
+
+<app-mallsBtns 
+    [malls]="malls"
+    (newQuery)="listStoreByMall( $event )">
+</app-mallsBtns>
+
+<app-list-stores [stores]="mallsByQuery"></app-list-stores>

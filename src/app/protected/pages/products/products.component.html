@@ -1,1 +1,3 @@
-<p>products works!</p>
+<app-search-bar (newQuery)="searchProduct( $event )"></app-search-bar>
+
+<app-list-products [products]="products"></app-list-products>

@@ -5,6 +5,7 @@ import { FormComponent } from './pages/form/form.component';
 import { MainComponent } from './pages/main/main.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { StockComponent } from './pages/stock/stock.component';
+import { BudgetComponent} from './pages/budget/budget.component'
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
       {path: 'form/add', component: FormComponent},
       {path: 'form/edit/:id', component: FormComponent},
       {path: 'products', component: ProductsComponent},
+      {path: 'budget', component: BudgetComponent},
     ]
   }
 ];

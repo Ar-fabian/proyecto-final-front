@@ -1,0 +1,6 @@
+<p>budget works!</p>
+<app-todo-filters [malls]="malls"
+(newQuery)="getTodo( $event)"
+></app-todo-filters>
+
+<app-todo [todos]="todos"></app-todo>

@@ -1,0 +1,13 @@
+<div class="container">
+    <button
+    mat-button
+    *ngFor="let mall of malls"
+    (click)="setMall( mall )"
+    >{{ mall }}</button>
+</div>
+<div class="div">
+    <input type="text" placeholder="Buscar producto"
+    #searchBar
+    (keyup.enter)="sendQuery( )"
+    >
+</div>

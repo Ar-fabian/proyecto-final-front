@@ -1,0 +1,7 @@
+<div class="container">
+    <button
+    mat-button
+    *ngFor="let mall of malls"
+    (click)="listStoreByMall( mall )"
+    >{{ mall }}</button>
+</div>

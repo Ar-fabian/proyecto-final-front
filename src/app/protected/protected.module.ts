@@ -12,10 +12,16 @@ import { StockComponent } from './pages/stock/stock.component';
 import { FormComponent } from './pages/form/form.component';
 
 import { CardsComponent } from './components/cards/cards.component';
-import { SearchComponent } from './components/search/search.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
+import { MallsBtnsComponent } from './components/malls-btns/mallsBtns.component';
+
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './pages/products/products.component';
+import { ListStoresComponent } from './components/list-stores/list-stores.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { ListProductsComponent } from './components/list-products/list-products.component';
+import { BudgetComponent } from './pages/budget/budget.component';
+import { TodoFiltersComponent } from './components/todo-filters/todo-filters.component';
+import { TodoComponent } from './components/todo/todo.component';
 
 
 
@@ -25,10 +31,15 @@ import { ProductsComponent } from './pages/products/products.component';
     CardsComponent,
     MainComponent,
     StockComponent,
-    SearchComponent,
-    ProductListComponent,
     FormComponent,
-    ProductsComponent
+    ProductsComponent,
+    MallsBtnsComponent,
+    ListStoresComponent,
+    SearchBarComponent,
+    ListProductsComponent,
+    BudgetComponent,
+    TodoFiltersComponent,
+    TodoComponent
   ],
   imports: [
     CommonModule,

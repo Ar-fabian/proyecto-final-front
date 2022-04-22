@@ -12,3 +12,26 @@ export interface Product{
     "store":string;
     "pid"?:string;
 }
+
+export interface MallResponse{
+    ok:boolean,
+    total?:string,
+    malls?:Mall[],
+    mall?:Mall[],
+    product?:Mall,
+    msg?:string
+}
+export interface Mall{
+    mall:string,
+    store:string,
+    _id:string,
+    storeDescription:string,
+    productName:string,
+    price:string,
+    cant:number
+}
+export interface Params{
+    mallSelected:string,
+    productSearch:string
+}
+
