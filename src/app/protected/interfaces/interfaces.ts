@@ -28,10 +28,13 @@ export interface Mall{
     storeDescription:string,
     productName:string,
     price:string,
-    cant:number
+    cant:number,
+    unit?:number,
+    storeImage?:string
 }
 export interface Params{
     mallSelected:string,
     productSearch:string
 }
+
 

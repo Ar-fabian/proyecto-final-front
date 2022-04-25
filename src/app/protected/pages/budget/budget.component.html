@@ -1,6 +1,18 @@
-<p>budget works!</p>
 <app-todo-filters [malls]="malls"
+[myObjects]="myObjects"
 (newQuery)="getTodo( $event)"
+(newMall)="getMall( $event )"
 ></app-todo-filters>
 
-<app-todo [todos]="todos"></app-todo>
+<div *ngFor="let todo of myObjects" class="product">
+    <p>{{todo.productName}}</p>
+    <p>{{todo.store}}</p>
+    <button (click)="decrement(todo)">Restar</button>
+    <p>{{ todo.unit }}</p>
+    <button (click)="increment(todo)">Sumar</button>
+    <p>{{todo.price | number}}</p>
+    <button mat-button (click)="deleteTodo(todo)">Borrar</button>
+</div>
+
+<br>
+<p>Total: {{completePrice | number}}</p>

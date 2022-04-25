@@ -22,11 +22,15 @@ export class MapService {
   getRouteBetweenPoints( start:[number,number], end:[number, number]){
 
     this.directionsApi.get<DirectionsResponse>(`/ ${ start.join(',')}; ${end.join(',')}`)
-      .subscribe( resp => this.drawPolyline( resp.routes[0] ) );
+      .subscribe( resp =>{
+        this.drawPolyline( resp.routes[0] ) 
+      });
+        
+        
   }
 
   private drawPolyline( route: Route){
-    console.log( { kms :route.distance/1000 , duration: route.duration / 60});
+    // console.log( { kms :route.distance/1000 , duration: route.duration / 60});
 
     if( !this.map ) throw Error('Mapa no inicializado')
 
@@ -80,11 +84,12 @@ export class MapService {
 
     
   }
-
   setMap( map:Map){
     this.map = map;
   }
-
+  get getMap(){
+    return this.map;
+  }
   myFlyTo( coords: LngLatLike){
     if( !this.isMapReady ) throw Error( 'El mapa no esta inicializado' );
 

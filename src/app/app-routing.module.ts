@@ -4,14 +4,18 @@ import { ValidateTokenGuard } from './guards/validate-token.guard';
 
 const routes: Routes = [
   {
+    path: 'home',
+    loadChildren: ()=> import('./home/home.module').then(m => m.HomeModule),
+  },
+  {
     path: 'auth',
     loadChildren: ()=> import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'protected',
     loadChildren: ()=> import('./protected/protected.module').then(m => m.ProtectedModule),
-    canActivate:[ValidateTokenGuard],
-    canLoad:[ ValidateTokenGuard]
+    // canActivate:[ValidateTokenGuard],
+    // canLoad:[ ValidateTokenGuard]
   },
   {
     path:'map',
@@ -19,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'auth'
+    redirectTo: 'home'
   }
 ];
 
