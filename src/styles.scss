@@ -1,6 +1,15 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
+:root{
+  // --body-color: rgba(173,181,189,1);
+  --body-color: rgb(238,237,255);
+  --gray: rgb(37, 37, 37);
+  --blue: rgb(10, 239, 255);
 
+
+
+  --normal-text: clamp(.9rem, 3.6vw, 1.1rem)
+}
 @font-face {
     font-family: Poppins-Regular;
     src: url('./assets/fonts/poppins/Poppins-Regular.ttf'); 

@@ -1,9 +1,12 @@
-.container{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+.containerMap{
+    width: min-content;
+    height: min-content;
+    margin: 0 auto;
+    margin-top: 45px;
+    background-color: #fff;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }

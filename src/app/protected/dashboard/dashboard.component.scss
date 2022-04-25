@@ -1,4 +1,94 @@
-mat-toolbar{
-    display: flex;
-    justify-content: space-between;
+.containerDashboard{
+    width: 100%;
+    height: 100vh;
+    background: var(--body-color);
 }
+.header{
+    width: 100%;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    // background: #F8F9FA;
+    // color: #F8F9FA;
+    // box-shadow: 0px 4px 10px 3px gray;
+    &__menu{
+        width: 100%;
+        display: grid;
+        position: absolute;
+        top: 0;
+        // background: #F8F9FA;
+        z-index: 5;
+        transform: translateY(-100%);
+        transition: .8s transform;
+    }
+    &__list{
+        width: 100%;
+        text-align: center;
+    }
+    &__close{
+        display: flex;
+        justify-content: flex-end;
+    }
+    // &__item{
+    //     // margin-left: 10px;
+    // }
+    &__link{
+        color: #000;
+    }
+    // &__btnMenu{
+
+    // }
+}
+.show{
+    transform: translateY(0%);
+}
+
+
+@media screen and (min-width: 430px) {
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background: ;
+        &__menu{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+            top: 0;
+            transform: translateY(0);
+        }
+        &__list{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        // &__item{
+        //     // margin-left: 10px;
+        // }
+        &__btnMenu, &__close{
+            display: none;
+        }
+    }
+}
+
+
+
+// mat-sidenav-container{
+//     background-color: var(--body-color);
+// }
+// .header{
+//     display: flex;
+//     justify-content: space-between;
+//     position: fixed;
+//     height: 60px;
+//     z-index: 1;
+// }
+// mat-nav-list{
+//     z-index: 5;
+// }

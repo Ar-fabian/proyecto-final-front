@@ -1,0 +1,6 @@
+<app-maps-btns 
+[maps]="maps"
+(map)="getMarkerByMall( $event )"
+></app-maps-btns>
+<app-map-screen></app-map-screen>
+<button mat-button (click)="getDirections()">Ruta</button>

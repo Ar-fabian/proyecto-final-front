@@ -26,13 +26,10 @@ export class MallService {
     }
     pricesCompare( query:string ){
       const queryProcessed = query.toLocaleLowerCase().trim().concat();
-      console.log( queryProcessed);
       const url = `${ this.localBaseUrl }/malls/product/${ queryProcessed }`
       return this.http.get<MallResponse>(url);
     }
     getTodo({mallSelected, productSearch}:Params){
-      console.log('mallSelected:',mallSelected);
-      console.log('productSearch:',productSearch);
       const url = `${this.localBaseUrl}/malls/budget?mall=${mallSelected}&productName=${productSearch}`;
       return this.http.get<MallResponse>(url);
     }

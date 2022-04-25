@@ -8,11 +8,19 @@ import { AuthService } from 'src/app/auth/services/auth.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+  showMenu:boolean = false;
   get user(){
     return this.authService.user;
   }
   constructor( private router: Router,
                private authService: AuthService) { }
+
+  toggleMenu(){
+    this.showMenu = !this.showMenu;    
+  }
+  openMap(){
+    this.router.navigateByUrl('/map/screen');
+  }
 
   logOut(){
     this.router.navigateByUrl('/auth/login');

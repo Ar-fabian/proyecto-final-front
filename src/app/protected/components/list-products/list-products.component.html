@@ -1,9 +1,21 @@
-<p>list-products works!</p>
-<div class="div" *ngFor="let product of products">
-    <p>{{ product.mall}}</p>
-    <p>{{ product.store}}</p>
-    <p>{{ product.productName}}</p>
-    <p>{{ product.price}}</p>
-    <p>{{ product.cant}}</p>
-    
+<div class="container" >
+    <div class="products" *ngFor="let product of products">
+        <div class="products__header">
+            <h2 class="products__title">{{ product.mall}}</h2>
+        </div>
+        <div class="products__body">
+            <div class="products__description">
+                <p class="products__text products__text--title">Tienda</p>
+                <p class="products__text products__text--title">Producto</p>
+                <p class="products__text products__text--title">Precio</p>
+                <p class="products__text products__text--title">Unidades</p>
+            </div>
+            <div class="products__content">
+                <p class="products__text">{{ product.store}}</p>
+                <p class="products__text">{{ product.productName}}</p>
+                <p class="products__text">{{ product.price}}</p>
+                <p class="products__text">{{ product.cant }}</p>
+            </div>
+        </div>
+    </div>
 </div>

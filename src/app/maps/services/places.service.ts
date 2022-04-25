@@ -47,7 +47,7 @@ export class PlacesService {
       this.isLoadingPlaces = false;
       return;
     }
-    if( !this.useLocation ) throw Error(' No hay useLocation');
+    if( !this.useLocation ) throw Error(' No hay userLocation');
     
     this.isLoadingPlaces = true;
     
@@ -61,7 +61,8 @@ export class PlacesService {
       this.isLoadingPlaces = false;
       this.places =  resp.features;
       this.mapService.createMarkersFromPlaces( this.places, this.useLocation! );
-      this.getDirections( resp.features[0] );
+      const [ lng, lat ] = resp.features[0].center;
+      this.mapService.myFlyTo( [ lng, lat ]);
     });
  
   }
@@ -69,13 +70,5 @@ export class PlacesService {
     this.places = [];
   }
 
-  getDirections( place: Feature){
-    if( !this.useLocation ) throw Error('No hay userLocation');
   
-    this.deletePlaces();
-    
-    const start = this.useLocation;
-    const end = place.center as [number,number];
-    this.mapService.getRouteBetweenPoints( start, end);
-  }
 }
