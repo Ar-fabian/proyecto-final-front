@@ -1,11 +1,22 @@
-<div class="container">
-    <button
-    mat-button
-    #Mall
-    *ngFor="let mall of malls"
-    (click)="setMall( mall )"
-    >{{ mall }}</button>
+<div class="containerSelected">    
+    <div class="selected__box">
+        
+        <div class="selected__options" [class.active]="click" >
+            <div class="selected__option" *ngFor="let mall of malls" (click)="setMall( mall )">
+                <p
+                class="selected__text"
+                #Mall
+                >{{ mall }}</p>
+            </div>
+        </div>
+
+        <div class="selected" (click)="toggleMenu()">
+            {{selected}}
+            <mat-icon class="selected__icon">expand_more</mat-icon>
+        </div>
+    </div>
 </div>
+
 <div class="div">
     <input type="text" placeholder="Buscar producto"
     #searchBar

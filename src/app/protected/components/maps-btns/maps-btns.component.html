@@ -1,5 +1,11 @@
-<button mat-button 
-*ngFor="let map of maps" 
-(click)="getMarkerByMall( map )"
->{{ map }}
-</button>
+<ul class="menu">
+    <ul class="menu__list">
+        <li *ngFor="let map of maps" class="menu__items">
+            <button mat-button 
+            (click)="getMarkerByMall( map )"
+            class="menu__buttons"
+            >{{ map }}
+            </button>
+        </li>
+    </ul>
+</ul>

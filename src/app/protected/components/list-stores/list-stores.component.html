@@ -1,5 +1,15 @@
-<div *ngFor="let store of stores"
-    >
-    <h2>{{store.store}} : <span>{{store.storeDescription}}</span></h2>
-    <img src="{{store.storeImage}}" alt="storeImage">
+<div class="container">
+
+    <div class=" content" *ngFor="let store of stores" >
+        <div class="image">
+            <img src="{{store.storeImage}}" alt="" class="img">
+        </div>
+        <div class="textContainer">
+            <h2 class="title">{{store.store}}</h2>
+            <p class="text text__description">{{store.storeDescription}}</p>
+            <p class="text">{{store.storeInfo?.timeTable}}</p>
+            <p class="text">{{store.storeInfo?.floor}}</p>
+            <a class="text button" href="{{store.storeInfo?.webSite}}">Visitanos</a>
+        </div>
+    </div>
 </div>

@@ -1,18 +1,3 @@
-export interface CrudResponse{
-    total?:number;
-    ok:boolean;
-    products?:Product[];
-    product?:Product;
-    msg?:string;
-}
-
-export interface Product{
-    "productName":string;
-    "stock":string;
-    "store":string;
-    "pid"?:string;
-}
-
 export interface MallResponse{
     ok:boolean,
     total?:string,
@@ -24,13 +9,23 @@ export interface MallResponse{
 export interface Mall{
     mall:string,
     store:string,
-    _id:string,
-    storeDescription:string,
     productName:string,
     price:string,
     cant:number,
+    storeDescription:string,
+    storeInfo?:StoreInfo,
+    storeImage?:string,
+    productInfo?:string,
+    productDescription:string,
+    productImage?:string,
     unit?:number,
-    storeImage?:string
+    _id:string,
+
+}
+export interface StoreInfo{
+    webSite:string,
+    timeTable:string,
+    floor:string
 }
 export interface Params{
     mallSelected:string,

@@ -8,7 +8,6 @@ import { MaterialModule } from '../material/material.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { StockComponent } from './pages/stock/stock.component';
-import { FormComponent } from './pages/form/form.component';
 
 import { CardsComponent } from './components/cards/cards.component';
 import { MallsBtnsComponent } from './components/malls-btns/mallsBtns.component';
@@ -30,7 +29,6 @@ import { MapsRoutesComponent } from './pages/maps-routes/maps-routes.component';
     DashboardComponent,
     CardsComponent,
     StockComponent,
-    FormComponent,
     ProductsComponent,
     MallsBtnsComponent,
     ListStoresComponent,
@@ -39,7 +37,7 @@ import { MapsRoutesComponent } from './pages/maps-routes/maps-routes.component';
     BudgetComponent,
     TodoFiltersComponent,
     MapsBtnsComponent,
-    MapsRoutesComponent,
+    MapsRoutesComponent
   ],
   imports: [
     CommonModule,

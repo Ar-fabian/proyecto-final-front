@@ -1,59 +1,83 @@
-.containerDashboard{
+
+.body{
     width: 100%;
     height: 100vh;
-    background: var(--body-color);
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
 .header{
     width: 100%;
-    display: flex;
     height: 50px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    // background: #F8F9FA;
-    // color: #F8F9FA;
-    // box-shadow: 0px 4px 10px 3px gray;
+    background: var(--header-color);
+    &__user{
+        margin-left: 20px;
+    }
     &__menu{
         width: 100%;
         display: grid;
         position: absolute;
         top: 0;
-        // background: #F8F9FA;
+        color: #fff;
         z-index: 5;
         transform: translateY(-100%);
         transition: .8s transform;
+        // box-shadow: 0px 4px 10px 3px gray;
     }
     &__list{
         width: 100%;
         text-align: center;
     }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__icon{
+        color: #fff;
+        margin-right: 5px;
+    }
+    &__link{
+        text-decoration: none;
+        font-size: var(--normal-text);
+    }
+    &__text{
+        color: #fff;
+    }
     &__close{
         display: flex;
         justify-content: flex-end;
     }
-    // &__item{
-    //     // margin-left: 10px;
-    // }
-    &__link{
-        color: #000;
+    &__item{
+        margin-left: 10px;
     }
-    // &__btnMenu{
-
-    // }
 }
 .show{
     transform: translateY(0%);
 }
 
 
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 680px) {
     .header{
         width: 100%;
-        display: flex;
+        height: 50px;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
         justify-content: space-between;
         align-items: center;
-        // background: ;
+        position: absolute;
+        z-index: 5;
+        background: var(--header-color);
+        & > &__menu{
+            justify-self: end;
+        }
         &__menu{
-            width: 60%;
+            width: 100%;
             height: 100%;
             display: flex;
             align-items: center;

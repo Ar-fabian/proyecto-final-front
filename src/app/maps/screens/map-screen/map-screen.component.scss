@@ -1,12 +1,30 @@
 .containerMap{
-    width: min-content;
-    height: min-content;
-    margin: 0 auto;
-    margin-top: 45px;
-    background-color: #fff;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 20px;
+    position: relative;
+    margin: 0 auto;
+}
+.map{
+    &__myLocation{
+        position: absolute;
+        bottom: 20px;
+        right: 10px;   
+        padding: 5px;
+        color: blue;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        animation: showMyLocation 0.5s linear 1.9s forwards;
+    }
+}
+
+@keyframes showMyLocation {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }

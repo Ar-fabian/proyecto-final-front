@@ -24,9 +24,6 @@ export class BtnMyLocationComponent{
         this.mapService.myFlyTo( coords );
       })
   }
-  closeMap(){
-    localStorage.removeItem('store');
-    this.router.navigateByUrl('/protected/main');
-  }
+
 
 }

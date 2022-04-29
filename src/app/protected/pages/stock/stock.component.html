@@ -1,7 +1,10 @@
 
-<app-mallsBtns 
+<div class="stockContainer">
+
+    <app-mallsBtns 
     [malls]="malls"
     (newQuery)="listStoreByMall( $event )">
-</app-mallsBtns>
+    </app-mallsBtns>
 
-<app-list-stores [stores]="mallsByQuery"></app-list-stores>
+    <app-list-stores [stores]="mallsByQuery" class="listStores"></app-list-stores>
+</div>

@@ -1,15 +1,21 @@
 window.sr = ScrollReveal();
 
-    sr.reveal('.navbar',{
-        duration: 2000,
+    sr.reveal('.hero_header',{
+        duration: 4000,
         origin: 'bottom',
         distance:'-200px',
 
     });
     
-    sr.reveal('.form_conteiner',{
-        duration: 2000,
-        origin: 'left',
+    sr.reveal('.hero__title',{
+        duration: 4000,
+        origin: 'bottom',
+        distance:'-200px',
+
+    });
+    sr.reveal('.hero__paragraph',{
+        duration: 3000,
+        origin: 'bottom',
         distance:'-200px',
 
     });
@@ -19,8 +25,22 @@ window.sr = ScrollReveal();
         distance:'-200px',
 
     });
-    sr.reveal('.title_signup',{
+    sr.reveal('.about__item',{
+        duration: 4000,
+        origin: 'top',
+        distance:'-200px',
+
+    });
+    sr.reveal('.productive__texts_conteiner',{
         duration: 3000,
+        origin: 'left',
+        distance:'-200px',
+
+    });
+
+
+    sr.reveal('.title_signup',{
+        duration: 4000,
         origin: 'left',
         distance:'-200px',
 
@@ -59,15 +79,5 @@ window.sr = ScrollReveal();
         origin: 'bottom',
         distance:'-400px',
 
-    }); sr.reveal('.cards',{
-        duration: 4000,
-        origin: 'rigth',
-        distance:'-400px',
-
-    }); sr.reveal('.cards2',{
-        duration: 4000,
-        origin: 'left',
-        distance:'-400px',
-
-    });
+    }); 
   

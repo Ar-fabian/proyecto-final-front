@@ -2,13 +2,30 @@
 [ FONT ]*/
 :root{
   // --body-color: rgba(173,181,189,1);
-  --body-color: rgb(238,237,255);
+  // --body-color: rgb(238,237,255);
+  --header-color: rgb(6,19,43);
+  --body-color: rgb(228,235,241);
   --gray: rgb(37, 37, 37);
   --blue: rgb(10, 239, 255);
 
 
 
-  --normal-text: clamp(.9rem, 3.6vw, 1.1rem)
+  --normal-text: clamp(.8rem, 3vw, 1.1rem)
+
+
+  --blue-intro: hsl(217, 28%, 15%);
+  --blue-main: rgb(223, 234, 253);
+  --blue-footer: hsl(216, 53%, 9%);
+  --blue-testimonials: hsl(219, 30%, 18%);
+  --white: hsl(0, 0%, 100%);
+  --cyan-gradient: hsl(176, 68%, 64%);
+  --blue-gradient: hsl(198, 60%, 50%);
+  --light-red: hsl(0, 100%, 63%);
+  --gradient: linear-gradient(to right, var(--cyan-gradient), var(--blue-gradient));
+  --body-font: 'Open Sans', sans-serif;
+  --heading-font: 'Raleway', sans-serif;
+  --padding-container: 60px 0;
+
 }
 @font-face {
     font-family: Poppins-Regular;
@@ -41,7 +58,6 @@
   }
   
   body, html {
-      height: 100%;
       font-family: Poppins-Regular, sans-serif;
   }
   

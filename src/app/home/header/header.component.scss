@@ -1,9 +1,41 @@
-.spacer{
-    flex: 1 1 auto;
+.logo{
+    font-size: 1.5rem;
+    color: #fff;
 }
-a{
-    color: white;
+.hero_header{
+    background-color: rgb(6, 19, 43);
+    position: relative;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    overflow: hidden;
+
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo{
+    width: 100px;
+}
+
+.nav__img{
+    width: 100%;
+    display: block;
+}
+
+.nav__link{
+    display: inline-block;
+    color: #fff;
     text-decoration: none;
-    margin: 15px;
-    cursor: pointer;
+    margin-left: .8em;
+}
+
+.nav__link:first-of-type{
+    margin-left: auto;
 }

@@ -20,7 +20,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
 register(name:string, email:string, password:string){
-  const url = `${ this.localbaseUrl}/user`;
+  const url = `${ this.baseUrl}/user`;
   const body = { name, email, password }
 
   return this.http.post<AuthResponse>( url, body )
@@ -40,7 +40,7 @@ register(name:string, email:string, password:string){
 
 login( email: string, password:string){
 
-  const url = `${ this.localbaseUrl}/auth/login`;
+  const url = `${ this.baseUrl}/auth/login`;
 
   const body ={ email, password };
 
@@ -61,7 +61,7 @@ login( email: string, password:string){
   
 
 validarToken(): Observable<boolean>{
-    const url = `${ this.localbaseUrl}/auth/renew`;
+    const url = `${ this.baseUrl}/auth/renew`;
     const headers = new HttpHeaders()
       .set('x-token', localStorage.getItem('token') || '');
      return this.http.get<AuthResponse>( url, { headers }).

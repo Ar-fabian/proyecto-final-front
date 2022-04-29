@@ -9,9 +9,11 @@ import Swal from 'sweetalert2';
   styleUrls: ['./todo-filters.component.scss']
 })
 export class TodoFiltersComponent implements OnInit {
-  @Input() malls:string[]=[];
+  malls:string[]=['Plaza de las Americas','Plaza Central', 'Hayuelos', 'Gran Estacion', 'Centro Mayor', 'Centro Comercial Andino'];
   @Input() myObjects:Mall[]=[];
+  click:boolean=false;
   reset:boolean = false;
+  selected:string= 'Escoge un centro comercial';
   params:Params={
     mallSelected:'',
     productSearch:''
@@ -28,6 +30,8 @@ export class TodoFiltersComponent implements OnInit {
   ngOnInit(): void {
   }
   setMall( mall:string ){
+    this.click = !this.click;
+    this.selected = mall;
     if(this.paramsClone.mallSelected != mall && this.paramsClone.mallSelected != '' && this.myObjects.length>0){
 
       Swal.fire({
@@ -70,5 +74,8 @@ export class TodoFiltersComponent implements OnInit {
     }
   }
 
+  toggleMenu(){
+    this.click = !this.click;
+  }
 
 }

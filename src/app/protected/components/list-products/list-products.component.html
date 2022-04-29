@@ -1,21 +1,26 @@
-<div class="container" >
-    <div class="products" *ngFor="let product of products">
-        <div class="products__header">
-            <h2 class="products__title">{{ product.mall}}</h2>
+<div class="containerListProducts" >
+    <div class="product" *ngFor="let product of products">
+        <div class="product__image">
+            <img src="{{product.productImage}}" alt="product-image" class="product__img">
         </div>
-        <div class="products__body">
-            <div class="products__description">
-                <p class="products__text products__text--title">Tienda</p>
-                <p class="products__text products__text--title">Producto</p>
-                <p class="products__text products__text--title">Precio</p>
-                <p class="products__text products__text--title">Unidades</p>
+        <div class="product__content">
+            <div class="product__main">
+                <div class="product__info">
+                    <h3 class="product__title">{{product.productInfo}}</h3>
+                    <p class="product__text">{{product.mall}}</p>
+                    <p class="product__text product__store">{{product.store}}</p>
+                    <p class="product__text">{{product.price | number}}</p>
+                    <p class="product__text">Stock: {{product.cant}}</p>
+                </div>
             </div>
-            <div class="products__content">
-                <p class="products__text">{{ product.store}}</p>
-                <p class="products__text">{{ product.productName}}</p>
-                <p class="products__text">{{ product.price}}</p>
-                <p class="products__text">{{ product.cant }}</p>
-            </div>
+        </div>
+        <mat-icon class="product__close">close</mat-icon>
+        <mat-icon class="product__triangle">change_history</mat-icon>
+        <mat-icon class="product__flash">flash_on</mat-icon>
+        <mat-icon class="product__crop">crop</mat-icon>
+
+        <div class="hover">
+            <div class="hover__container"></div>
         </div>
     </div>
 </div>

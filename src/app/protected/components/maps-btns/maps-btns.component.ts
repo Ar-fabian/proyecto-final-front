@@ -6,7 +6,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./maps-btns.component.scss']
 })
 export class MapsBtnsComponent implements OnInit {
-  @Input() maps:string[]=[];
+  maps:string[]=['Plaza de las Americas','Centro Mayor','Plaza central','Gran Estacion','Centro Comercial Andino'];
   constructor() { }
 
   @Output() map:EventEmitter<string> = new EventEmitter();

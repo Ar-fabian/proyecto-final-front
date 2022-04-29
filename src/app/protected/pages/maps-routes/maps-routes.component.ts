@@ -9,21 +9,12 @@ import { Feature } from '../../../maps/interfaces/places';
   styleUrls: ['./maps-routes.component.scss']
 })
 export class MapsRoutesComponent implements OnInit {
-  maps:string[]=[];
   constructor( private mallService:MallService,
                private placeService:PlacesService,
                private mapService:MapService) { }
 
   
   ngOnInit(): void {
-    this.mallService.listMall()
-    .subscribe( resp =>{
-      resp.malls?.forEach( mall =>{
-        if( !this.maps.includes(mall.mall)){
-          this.maps.push(mall.mall);
-        }
-      })
-    });
   }
   get isLoadingPlaces():boolean{
     return this.placeService.isLoadingPlaces;

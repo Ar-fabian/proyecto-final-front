@@ -1,0 +1,16 @@
+.stockContainer{
+    width: 100%;
+    // height: 100vh;
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+.listStores{
+    width: 80%;
+    height: 100%;
+    background-image: url(../../../../assets/fondo__stroes.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}

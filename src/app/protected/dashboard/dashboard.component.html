@@ -1,47 +1,46 @@
-<div class="containerDashboard">
-    <div class="header">
-        <p class="header__user">Usuario</p>
-        <nav class="header__menu" [class.show]="showMenu">
-            <ul class="header__list">
+<body class="body">
+    <main class="main">
+        <div class="header">
+            <p class="header__user">Usuario</p>
+            <nav class="header__menu" [class.show]="showMenu">
+                <ul class="header__list">
                 <div class="header__close">
                     <button mat-icon-button class="header__btnClose" (click)="toggleMenu()">
                         <mat-icon>close</mat-icon>
                     </button>
                 </div>
                 <li class="header__item">
+                    <mat-icon mat-icon class="header__icon">place</mat-icon>
                     <a mat-list-item
                     routerLink="./maps"
                     class="header__link">
-                    <mat-icon mat-list-icon>label</mat-icon>
-                    <span>Rutas</span>
+                    <p class="header__text">Rutas</p>
                     </a>
                 </li>
                 <li class="header__item">
+                    <mat-icon mat-list-icon class="header__icon">store</mat-icon>
                     <a routerLink="./stock"
                     mat-list-item
                     class="header__link">
-                    <mat-icon mat-list-icon>label</mat-icon>
-                    <span>Tiendas</span>
+                    <p class="header__text">Tiendas</p>
                     </a>
                 </li>
                 <li class="header__item">
+                    <mat-icon mat-list-icon class="header__icon">sell</mat-icon>
                     <a routerLink="./products"
                     mat-list-item
                     class="header__link">
-                    <mat-icon mat-list-icon>label</mat-icon>
-                    <span>Productos</span>
+                    <p class="header__text">Productos</p>
                     </a>
                 </li>
                 <li class="header__item">
+                    <mat-icon mat-list-icon class="header__icon">paid</mat-icon>
                     <a routerLink="./budget"
                     mat-list-item
                     class="header__link">
-                    <mat-icon mat-list-icon>label</mat-icon>
-                    <span>Presupuesto</span>
+                    <p class="header__text">Presupuesto</p>
                     </a>
                 </li>
-                <li class="header__item"><a class="header__link">Item</a></li>
-                <li class="header__item"><a class="header__link">Item</a></li>
                 <button mat-button>logout</button>
             </ul>
         </nav>
@@ -49,56 +48,11 @@
             <mat-icon>menu</mat-icon>
         </button>
     </div>
-    <router-outlet></router-outlet>
-</div>
+        
+        <router-outlet></router-outlet>
+    </main>
+</body>
 
 
 
 
-<!-- <mat-sidenav-container fullscreen>
-    <mat-sidenav #sidenav mode="over">
-        <mat-toolbar>
-            <button mat-icon-button
-                    (click)="sidenav.toggle()">
-                <span>Menu</span>
-                <mat-icon>close</mat-icon>
-            </button>
-        </mat-toolbar>
-        <mat-nav-list>
-            <a routerLink="./main"
-            mat-list-item
-            (click)="sidenav.toggle()">
-            <mat-icon mat-list-icon>label</mat-icon>
-            <span>main</span>
-            </a>
-            <a routerLink="./stock"
-            mat-list-item
-            (click)="sidenav.toggle()">
-            <mat-icon mat-list-icon>label</mat-icon>
-            <span>Aliados</span>
-            </a>
-            <a routerLink="./products"
-            mat-list-item
-            (click)="sidenav.toggle()">
-            <mat-icon mat-list-icon>label</mat-icon>
-            <span>Productos</span>
-            </a>
-            <a routerLink="./budget"
-            mat-list-item
-            (click)="sidenav.toggle()">
-            <mat-icon mat-list-icon>label</mat-icon>
-            <span>Presupuesto</span>
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-toolbar class="header">
-        <button mat-icon-button
-                (click)="sidenav.toggle()">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <button mat-button>
-            logout
-        </button>
-    </mat-toolbar>
-</mat-sidenav-container> -->

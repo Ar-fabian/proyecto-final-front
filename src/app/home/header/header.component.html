@@ -1,15 +1,16 @@
-<mat-toolbar class="navbar" color="primary">
-
-    <ul>
-        <a routerLink="inicio">Inicio</a>
-    </ul>
-    <ul>
-        <a routerLink="create">Create Task</a>
-    </ul>
-    <span class="spacer"></span>
-    <ul>
-        <a mat-button (click)="signUp()">Sign Up</a>
-        <a mat-button (click)="login()">Login User</a>
-    </ul>
+<section class="hero_header">
     
-</mat-toolbar>
+
+    <nav class="nav container">
+      <span class="logo">OneStep</span>
+
+      <a class="nav__link" (click)="login()">Login</a>
+      <a class="nav__link" (click)="signUp()">Signup</a>
+    </nav>
+   
+
+</section>
+
+
+
+    

@@ -1,5 +1,30 @@
+.containerBudget{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: gray;
+    padding-top:80px;
+    background-image: url(../../../../assets/budget-cart.svg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: bottom right;
+
+}
+.products{
+    width: 45%;
+    height: 450px;
+    margin-left: 40px;
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+}
 .product{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 50%;
+}
+.total{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
 }

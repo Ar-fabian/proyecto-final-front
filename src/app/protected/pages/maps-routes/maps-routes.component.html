@@ -1,6 +1,21 @@
-<app-maps-btns 
-[maps]="maps"
-(map)="getMarkerByMall( $event )"
-></app-maps-btns>
-<app-map-screen></app-map-screen>
-<button mat-button (click)="getDirections()">Ruta</button>
+<section class="sectionRoutes">
+
+
+    
+<div class="containerMaps">
+
+    <app-maps-btns 
+    class="maps__menu"
+    (map)="getMarkerByMall( $event )">
+    </app-maps-btns>
+
+
+        <app-map-screen class="maps__screen"></app-map-screen>
+
+
+        <button mat-button (click)="getDirections()" class="maps__directions">
+            <mat-icon>directions</mat-icon>
+        </button>
+
+    </div>
+</section>

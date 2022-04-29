@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import Swal from 'sweetalert2';
 import { MallResponse, Params } from '../interfaces/interfaces';
 
 
@@ -16,21 +15,21 @@ export class MallService {
     constructor( private http: HttpClient) { }
 
     listMall(){
-        const url = `${this.localBaseUrl}/malls`;
+        const url = `${this.baseUrl}/malls`;
         return this.http.get<MallResponse>(url)
     }
 
     listStoreByMall( query:string ){
-      const url = `${ this.localBaseUrl }/malls/mall/${ query }`
+      const url = `${ this.baseUrl }/malls/mall/${ query }`
       return this.http.get<MallResponse>(url)
     }
     pricesCompare( query:string ){
       const queryProcessed = query.toLocaleLowerCase().trim().concat();
-      const url = `${ this.localBaseUrl }/malls/product/${ queryProcessed }`
+      const url = `${ this.baseUrl }/malls/product/${ queryProcessed }`
       return this.http.get<MallResponse>(url);
     }
     getTodo({mallSelected, productSearch}:Params){
-      const url = `${this.localBaseUrl}/malls/budget?mall=${mallSelected}&productName=${productSearch}`;
+      const url = `${this.baseUrl}/malls/budget?mall=${mallSelected}&productName=${productSearch}`;
       return this.http.get<MallResponse>(url);
     }
 
