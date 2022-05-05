@@ -1,0 +1,49 @@
+<div class="header">
+    <p class="header__user">{{userName}}</p>
+    <nav class="header__menu">
+        <ul class="header__list">
+        <div class="header__close">
+            <button mat-icon-button class="header__btnClose">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+        <li class="header__item">
+            <mat-icon mat-icon class="header__icon">place</mat-icon>
+            <a mat-list-item
+            routerLink="/protected/maps"
+            class="header__link">
+            <p class="header__text">Rutas</p>
+            </a>
+        </li>
+        <li class="header__item">
+            <mat-icon mat-list-icon class="header__icon">store</mat-icon>
+            <a routerLink="/protected/stock"
+            mat-list-item
+            class="header__link">
+            <p class="header__text">Tiendas</p>
+            </a>
+        </li>
+        <li class="header__item">
+            <mat-icon mat-list-icon class="header__icon">sell</mat-icon>
+            <a routerLink="/protected/products"
+            mat-list-item
+            class="header__link">
+            <p class="header__text">Productos</p>
+            </a>
+        </li>
+        <!-- <li class="header__item">
+            <mat-icon mat-list-icon class="header__icon">paid</mat-icon>
+            <a routerLink="/protected/budget"
+            mat-list-item
+            class="header__link">
+            <p class="header__text">Presupuesto</p>
+            </a>
+        </li> -->
+        <button mat-button (click)="logOut()" class="header__button">logout</button>
+    </ul>
+</nav>
+<button mat-icon-button class="header__btnMenu" >
+    <mat-icon>menu</mat-icon>
+</button>
+</div>
+<router-outlet></router-outlet>

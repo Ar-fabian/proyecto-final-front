@@ -1,5 +1,6 @@
 window.sr = ScrollReveal();
 
+
     sr.reveal('.hero_header',{
         duration: 4000,
         origin: 'bottom',

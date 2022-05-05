@@ -1,11 +1,10 @@
 <ul class="menu">
-    <ul class="menu__list">
-        <li *ngFor="let map of maps" class="menu__items">
-            <button mat-button 
-            (click)="getMarkerByMall( map )"
-            class="menu__buttons"
-            >{{ map }}
-            </button>
-        </li>
-    </ul>
+    <li *ngFor="let map of maps" class="menu__items">
+
+        <p class="menu__text"
+        [class.active]="map === selectedMall"
+        (click)="getMarkerByMall( map )"
+        > {{ map }} </p>
+
+    </li>
 </ul>

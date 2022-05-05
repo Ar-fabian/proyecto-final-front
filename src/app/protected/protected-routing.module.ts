@@ -10,7 +10,8 @@ import { MapsRoutesComponent } from './pages/maps-routes/maps-routes.component';
 const routes: Routes = [
   {
     path:'',
-    component: DashboardComponent,
+    // component: DashboardComponent,
+    // component: MapsRoutesComponent,
     children:[
       {path: 'maps', component: MapsRoutesComponent },
       {path: 'stock', component: StockComponent},

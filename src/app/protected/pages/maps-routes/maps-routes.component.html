@@ -1,21 +1,23 @@
-<section class="sectionRoutes">
+<app-header></app-header>
+<section class="section">
+    <div class="section__circle"></div>
+    <div class="section__container">
+        <div class="section__decoration"></div>
+        <app-map-screen></app-map-screen>
+            
+
+        <app-maps-btns 
+        (map)="getMarkerByMall( $event )">
+        </app-maps-btns>
 
 
-    
-<div class="containerMaps">
-
-    <app-maps-btns 
-    class="maps__menu"
-    (map)="getMarkerByMall( $event )">
-    </app-maps-btns>
 
 
-        <app-map-screen class="maps__screen"></app-map-screen>
-
-
-        <button mat-button (click)="getDirections()" class="maps__directions">
+        <span (click)="getDirections()" class="maps__directions" *ngIf="buttonActive">
             <mat-icon>directions</mat-icon>
-        </button>
+        </span>
 
     </div>
 </section>
+
+

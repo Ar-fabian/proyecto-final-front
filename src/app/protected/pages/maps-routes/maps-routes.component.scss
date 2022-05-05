@@ -1,34 +1,14 @@
-.sectionRoutes{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    // background-image: url(../../../../assets/);
-    background-size: cover;
-    
-    // display: flex;
-}
-.containerMaps{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    align-items: center;
-}
-.maps{
-    &__directions{
+.maps__directions{
         position: absolute;
-        bottom: 5px;
-        right: 12%;
+        bottom: 28%;
+        right: 37%;
+        padding: 0px;
         color: blue;
         opacity: 0;
-        animation: showRoute 1s linear 2s forwards;
-    }
-    &__screen{
-        height: min-content;
-        // margin: 0 auto;
-    }
+        transform: scale(1.5);
+        animation: showRoute .5s linear forwards;
+        cursor: pointer;
+
 }
 @keyframes showRoute {
     0%{

@@ -8,28 +8,17 @@ import { Subscription } from 'rxjs';
   templateUrl: './stock.component.html',
   styleUrls: ['./stock.component.scss']
 })
-export class StockComponent implements OnInit ,OnDestroy{
+export class StockComponent implements OnDestroy{
 
-  malls:string[]=[];
   mallsByQuery:Mall[]=[];
   listObservers:Subscription[]=[];
+  selectedMall:boolean=false;
 
   constructor( private mallService:MallService) { }
 
-  ngOnInit(): void {
-    const listMall = this.mallService.listMall()
-    .subscribe(resp =>{
-      if(resp.ok === true){
-        resp.malls!.forEach( item =>{
-          if(!this.malls.includes(item.mall!)){
-            this.malls.push(item.mall!);
-          }
-        })
-      }
-    });
-    this.listObservers.push(listMall);
-  }
+
   listStoreByMall( query:string){
+
       const listStoreByMall = this.mallService.listStoreByMall( query )
           .subscribe(resp => {
             if( resp.ok === true){
@@ -37,6 +26,10 @@ export class StockComponent implements OnInit ,OnDestroy{
             }
           });
     this.listObservers.push(listStoreByMall);
+  }
+
+  eventBack( flag:boolean ){
+    this.selectedMall = flag;
   }
 
 ngOnDestroy(): void {

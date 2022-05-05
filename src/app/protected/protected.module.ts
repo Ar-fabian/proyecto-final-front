@@ -22,6 +22,7 @@ import { TodoFiltersComponent } from './components/todo-filters/todo-filters.com
 import { MapsModule } from '../maps/maps.module';
 import { MapsBtnsComponent } from './components/maps-btns/maps-btns.component';
 import { MapsRoutesComponent } from './pages/maps-routes/maps-routes.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MapsRoutesComponent } from './pages/maps-routes/maps-routes.component';
     BudgetComponent,
     TodoFiltersComponent,
     MapsBtnsComponent,
-    MapsRoutesComponent
+    MapsRoutesComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -45,7 +47,7 @@ import { MapsRoutesComponent } from './pages/maps-routes/maps-routes.component';
     ProtectedRoutingModule,
     MaterialModule,
     FormsModule,
-    MapsModule
+    MapsModule,
   ]
 })
 export class ProtectedModule { }

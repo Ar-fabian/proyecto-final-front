@@ -9,6 +9,7 @@ import { Feature } from '../../../maps/interfaces/places';
   styleUrls: ['./maps-routes.component.scss']
 })
 export class MapsRoutesComponent implements OnInit {
+  buttonActive:boolean=false;
   constructor( private mallService:MallService,
                private placeService:PlacesService,
                private mapService:MapService) { }
@@ -24,6 +25,7 @@ export class MapsRoutesComponent implements OnInit {
   }
 
   getMarkerByMall( mall:string ){
+    this.buttonActive = true;
     this.placeService.getPlacesByQuery( mall );
     this.mapService.getMap;
     if( this.mapService.getMap!.getLayer('RouteString')){
@@ -33,6 +35,7 @@ export class MapsRoutesComponent implements OnInit {
   }
 
   getDirections(){
+    this.buttonActive = false;
     if( !this.placeService.useLocation ) throw Error('No hay userLocation');
     const start = this.placeService.useLocation;
     const end = this.places[0].center as [number,number];

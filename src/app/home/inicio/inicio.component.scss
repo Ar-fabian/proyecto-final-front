@@ -122,7 +122,8 @@
     height: 200px;
     border-radius: 5px;
    padding: 15px;
-   
+   display: flex;
+   align-items: center;
     
 }
 .productive__img{
@@ -323,7 +324,9 @@ body .container__cards{
     background-color: var(--blue-footer);
     color: #fff;
 }
-
+.footer__logo{
+    color: #fff;
+}
 .footer__items{
     display: grid;
     gap: 1em;   

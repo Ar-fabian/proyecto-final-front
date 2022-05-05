@@ -1,10 +1,20 @@
+<app-header></app-header>
+<section class="section">
+    <div class="section__circle"></div>
 
-<div class="stockContainer">
+    <div class="section__container">
+    
 
-    <app-mallsBtns 
-    [malls]="malls"
-    (newQuery)="listStoreByMall( $event )">
-    </app-mallsBtns>
+        <app-mallsBtns 
+        (newQuery)="listStoreByMall( $event )"
+        (eventBack)="eventBack( $event )">
+        </app-mallsBtns>
 
-    <app-list-stores [stores]="mallsByQuery" class="listStores"></app-list-stores>
-</div>
+        <app-list-stores [stores]="mallsByQuery" class="listStores" *ngIf="selectedMall"></app-list-stores>
+
+    </div>
+</section>
+
+
+    
+

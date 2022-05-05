@@ -1,8 +1,105 @@
+<section class="auth">
+    <div class="auth__container">
+        <form class="form" 
+            autocomplete="off"
+            [formGroup]="formLogin"
+            (ngSubmit)="login()">
+                    
+            <div class="form__content form__content--login contentLogin">
+                <span class="form__title">
+                    Login
+                </span>
+        
+                <div class="form__field">
+                    <input class="form__input"
+                    type="email" required
+                    formControlName="email"
+                    >
+                    <span class="form__span"></span>
+                    <label class="form__label">Ingrese su email</label>
+                </div>
+        
+                <div class="form__field">
+                    <input class="form__input"
+                    type="password" required
+                    formControlName="password"
+                    >
+                    <span class="form__span"></span>
+                    <label class="form__label">Ingrese su contraseña</label>
+                </div>
+                        
+                <button class="form__button"
+                type="submit"
+                [disabled]="formLogin.invalid">
+                    Login
+                </button>
+        
+            </div>
+        </form>
 
-<div class="limiter">
-    <div class="container-login100" style="background-image: url('../../../../assets/images/bg-01.jpg');">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-            <router-outlet></router-outlet>
-        </div>
+        <form class="form" 
+        autocomplete="off"
+        [formGroup]="formRegister"
+        (ngSubmit)="register()"
+        >
+        <div class="form__content form__content--register contentRegister">
+            <span class="form__title">
+                Nuevo usuario
+            </span>
+    
+            <div class="form__field">
+                <input class="form__input"
+                type="text" required
+                formControlName="name" 
+                >
+                <span class="form__span"></span>
+                <label class="form__label">Ingrese su nombre</label>
+            </div>
+    
+            <div class="form__field">
+                <input class="form__input"
+                type="email" required
+                formControlName="email" 
+                >
+                <span class="form__span"></span>
+                <label class="form__label">Ingrese su email</label>
+            </div>
+    
+            <div class="form__field">
+                <input class="form__input"
+                type="password" required
+                formControlName="password" 
+                >
+                <span class="form__span"></span>
+                <label class="form__label">Ingrese su contraseña</label>
+            </div>
+    
+            
+                <button class="form__button"
+                        type="submit"
+                        [disabled]="formRegister.invalid">
+                    Registrarme
+                </button>
+        </div>            
+        
+        </form>
+            <div class="auth__screen">
+                <div class="auth__login">
+                    <h2 class="auth__title">Bienvenido</h2>
+                    <span class="auth__text">¿Ya estas registrado?</span>
+                    <button class="auth__btn" (click)="toggleRegister()">
+                        Ingresar
+                    </button>
+                </div>
+                <div class="auth__register">
+                    <h2 class="auth__title">Bienvenido</h2>
+                    <span class="auth__text">¿No te has registrado?</span>
+                    <button class="auth__btn" (click)="toggleRegister()">
+                        Registrarse
+                    </button>
+                </div>
+            </div>
     </div>
-</div>
+</section>
+
+

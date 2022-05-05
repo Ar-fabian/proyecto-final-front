@@ -1,11 +1,12 @@
 .map{
     width: 50vw;
     height: 60vh;
+    border: 1px solid var(--blue-intro);
     border-radius: 20px;
     margin: 0 auto;
-    // opacity: 0;
-    // transform: translateX(-100px);
-    // animation: showMap 1s forwards 1.5s;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: showMap .6s forwards 1.1s linear;
 }
 @keyframes showMap {
     0%{

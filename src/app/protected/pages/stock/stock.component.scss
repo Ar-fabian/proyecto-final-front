@@ -1,16 +1,34 @@
-.stockContainer{
-    width: 100%;
-    // height: 100vh;
-    padding-top: 100px;
-    position: relative;
-    display: flex;
-    justify-content: end;
+.section{
+    animation: changeColorSection 1s linear .3s forwards;
+    &__circle{
+        animation: changeColorCircle 1s linear .3s forwards;
+    }
+    &__container{
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+        // border-radius: 35px 0px 0px 35px;
+        border-radius: 35px 0px 0px 0px;
+        &::-webkit-scrollbar{
+            width: 7px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: var(--white);
+            border-radius: 10px;
+            height: 7px;
+        }
+    }
 }
 .listStores{
-    width: 80%;
-    height: 100%;
-    background-image: url(../../../../assets/fondo__stroes.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-attachment: fixed;
+    position: absolute;
+    top: 7%;
 }
+// @keyframes changeColorSection {
+//     100%{
+//         background: var(--blue-intro);
+//     }
+// }
+// @keyframes changeColorCircle {
+//     100%{
+//         background: var(--blue-gradient);
+//     }
+// }

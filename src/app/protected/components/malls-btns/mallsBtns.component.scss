@@ -1,18 +1,78 @@
-.malls__list{
-    width: 20%;
-    height: 100%;
-    padding-top: 100px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-.malls__menu{
+
+.malls{
     width: 100%;
+    height: 100%;
     display: grid;
-    justify-content: center;
-    padding: 140px 0;
-    border-radius: 0 120px 120px 0;
-    background: #ff8000;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    color: #fff;
+    position: relative;
+    &__card{
+        height: 25vh;
+        border-radius: 15px;
+        border: 1px solid #000;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        transition: all 2s;
+        cursor: pointer;
+        // &:hover{
+        //     transform: scale(1.05);
+        // }
+        &:nth-child(1){
+            background-image: url(../../../../assets/bg1.jpg);
+            animation: showCard .8s linear 0s forwards;
+        }
+        &:nth-child(2){
+            background-image: url(../../../../assets/bg2.jpg);
+            animation: showCard .8s linear 0.2s forwards;
+        }
+        &:nth-child(3){
+            background-image: url(../../../../assets/bg1.jpg);
+            animation: showCard .8s linear 0.4s forwards;
+        }
+        &:nth-child(4){
+            background-image: url(../../../../assets/bg2.jpg);
+            animation: showCard .8s linear 0.6s forwards;
+        }
+        &:nth-child(5){
+            background-image: url(../../../../assets/bg1.jpg);
+            animation: showCard .8s linear 0.8s forwards;
+        }
+        &:nth-child(6){
+            background-image: url(../../../../assets/bg2.jpg);
+            animation: showCard .8s linear 1s forwards;
+        }
+    }
+    &__text{
+        font-size: var(--normal-text);
+        font-weight: bold;
+        color: #000;
+    }
+}
+.arrow__back{
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: 5;
+}
+@keyframes showCard {
+    100%{
+        opacity: 1;
+    }
+}
+
+.selectedMall{
+    width: 20%;
+    position: fixed;
+    top: 28%;
+    left: 11%;
+    z-index: 5;
+    transition: all 0.5s;
+}
+.notSelectedMall{
+    transition: transform 0.5s;
+    transform: scale(0);
 }

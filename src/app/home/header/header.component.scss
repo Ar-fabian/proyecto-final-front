@@ -3,7 +3,7 @@
     color: #fff;
 }
 .hero_header{
-    background-color: rgb(6, 19, 43);
+    background-color: var(--blue-header);
     position: relative;
 }
 .container{
@@ -34,6 +34,7 @@
     color: #fff;
     text-decoration: none;
     margin-left: .8em;
+    cursor: pointer;
 }
 
 .nav__link:first-of-type{

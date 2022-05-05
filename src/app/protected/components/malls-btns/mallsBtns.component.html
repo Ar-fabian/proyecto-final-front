@@ -1,10 +1,15 @@
-<div class="malls__list">
-    <ul class="malls__menu">
-        <li *ngFor="let mall of malls">
-            <button
-            mat-button
-            (click)="listStoreByMall( mall )"
-            >{{ mall }}</button>
-        </li>
-    </ul>
+<div class="malls">
+
+
+    <div *ngFor="let mall of malls"
+        (click)="listStoreByMall( mall )"
+        (click)="toggleClass( mall )"
+        class="malls__card">
+        <p class="malls__text">{{ mall }}</p>
+    </div>
+
+    <button mat-button class="arrow__back"
+        (click)="back()" *ngIf="showArrow">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
 </div>

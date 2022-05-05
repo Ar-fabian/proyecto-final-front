@@ -6,7 +6,7 @@
     justify-items: end;
     grid-template-columns: 1fr;
 }
-.content{
+.content__store{
     width: 80%;
     display: flex;
     padding: 20px;
@@ -15,7 +15,7 @@
     background: rgb(6,19,43);
     transform: translateY(50px);
     opacity: 0;
-    animation: showStores .8s linear forwards;
+    animation: showStores .8s linear .5s forwards;
 }
 .textContainer{
     padding: 0 20px;
@@ -34,7 +34,7 @@
     display: inline-block;
     text-decoration: none;
     padding: 5px 10px;
-    border: 2px solid #ff8000;
+    border: 2px solid var(--blue-gradient);
     border-radius: 20px;
     margin-top: 10px;
 }
